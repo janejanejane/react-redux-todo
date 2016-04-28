@@ -28,6 +28,7 @@ Counter.propTypes = {
 
 // Action
 const increaseAction = { type: 'increase' }
+const decreaseAction = { type: 'decrease' }
 
 // Reducer
 function counter(state = { count: 0 }, action ) {
@@ -55,7 +56,8 @@ function mapStateToProps( state ){
 // Map redux actions to component props
 function mapDispatchToProps( dispatch ){
   return {
-    onIncreaseClick: () => dispatch( increaseAction )
+    onIncreaseClick: () => dispatch( increaseAction ),
+    onDecreaseClick: () => dispatch( decreaseAction )
   }
 }
 
